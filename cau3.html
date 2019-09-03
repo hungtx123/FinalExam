@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập số N:
+<input type="text" id="input">
+<input type="button" value="In giá trị" onclick="printFibonacci()">
+<script>
+    function printFibonacci() {
+        let input = document.getElementById("input").value;
+        let sohangn1 = 1;
+        let sohangn2 = 0;
+        while (input < 2) {
+            alert("Nhập lại!");
+            return;
+        }
+        document.write("Dãy Fibonaci gồm 1  ");
+        while (sohangn1 < input / 2) {
+            let sohang = sohangn1 + sohangn2;
+            document.write("   " + sohang);
+            sohangn2 = sohangn1;
+            sohangn1 = sohang;
+        }
+
+    }
+</script>
+</body>
+</html>
